@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(214, 228, 228);
+    background-color: rgb(214, 228, 228);  /* background */
 }
 
 #title {
@@ -44,12 +44,12 @@ body{
     font-size: 100px;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
-    background-color:rgb(50, 50, 50);
-    color: white;
+    background-color:rgb(50, 50, 50);   /* number varra box */
+    color: white;                       /* number varra box kulla irukka number */
 }
 
 ::placeholder {
-    color: white;
+    color: white;      /* number varra box kulla irukka number illaina anga oru 0 irukkumey athoda colour ithu*/
   }
 
 #button_wrapper{
@@ -63,7 +63,7 @@ body{
     justify-content: center;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
-    background-color: rgb(107, 107, 107);
+    background-color: rgb(107, 107, 107);             /* button yellaam irukka box ithu */
 } 
 
 button {
@@ -74,11 +74,12 @@ button {
     border: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
+    background-color: rgb(255, 255, 255);                             /* ithu matha buttons */
 }
 
 #multiply,#divide,#equal,#add,#subtract,#backspace,#allclear,#point {
-    background-color: rgb(255, 159, 9);
+    background-color: rgb(255, 159, 9);                                /* yellow button */
 }
 
 button:hover {
