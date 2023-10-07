@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(214, 228, 228);
+}
+
+#title {
+    text-align: center;
+    margin: 10px 0 10px 0;
+    font-size: 60px;
+}
+
+@media screen and (max-width: 750px){
+    #title {
+        font-size: 40px;
+    }
+}
+
+#description {
+    text-align: center;
+    padding: 10px;
+    margin: 0 0 10px 0;
+    font-size: large;
+}
+
+ #calculator {
+    height: 525px;
+    width: 400px; 
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+} 
+
+#input {
+    height: 25%;
+    width: 100%;
+    text-align: end;
+    padding: 10px;
+    border: none;
+    font-size: 100px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color:rgb(50, 50, 50);
+    color: white;
+}
+
+::placeholder {
+    color: white;
+  }
+
+#button_wrapper{
+    height: 75%;
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    gap: 10px 40px;
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    background-color: rgb(107, 107, 107);
+} 
+
+button {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    font-size: 38px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#multiply,#divide,#equal,#add,#subtract,#backspace,#allclear,#point {
+    background-color: rgb(255, 159, 9);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#backspace {
+font-size: x-large;
+}
+
+#allclear {
+    font-size: x-large;
+    }
