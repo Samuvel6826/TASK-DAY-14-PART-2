@@ -1,4 +1,4 @@
-// DOM- Day -2 : Document vs Window 14/05/2023 - Part 2 - Calculator
+// DOM- Day -2 : Document vs Window 14/05/2023 - Part 2 - Javascript Calculator
 
 // TITLE
 let title = document.createElement("h1")
