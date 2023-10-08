@@ -58,7 +58,7 @@ button_wrapper.setAttribute("id", "button_wrapper")
 calculator.appendChild(button_wrapper)
 
 // BUTTON ARRAY
-let btnArr = ["AC","DEL",".","*",7,8,9,"/",4,5,6,"-",1,2,3,"+",0,"00","%","="]
+let btnArr = ["AC","DEL",".","*","7","8","9","/","4","5","6","-","1","2","3","+","0","00","%","="]
 
 // LOOP TO CREATE BUTTONS
 for(let i=0; i<btnArr.length; i++)
@@ -118,24 +118,30 @@ document.addEventListener("keyup", (event) => {
     else if(event.key == "Backspace") {bkdis()}
     else if(event.key == ".") {input.value += "."}
     else if(event.key == "*") {input.value += "*"}
-    else if(event.key == 7) {input.value += "7"}
-    else if(event.key == 8) {input.value += "8"}
-    else if(event.key == 9) {input.value += "9"}
+    else if(event.key == "7") {input.value += "7"}
+    else if(event.key == "8") {input.value += "8"}
+    else if(event.key == "9") {input.value += "9"}
     else if(event.key == "/") {input.value += "/"}
-    else if(event.key == 4) {input.value += "4"}
-    else if(event.key == 5) {input.value += "5"}
-    else if(event.key == 6) {input.value += 6}
+    else if(event.key == "4") {input.value += "4"}
+    else if(event.key == "5") {input.value += "5"}
+    else if(event.key == "6") {input.value += "6"}
     else if(event.key == "-") {input.value += "-"}
-    else if(event.key == 1) {input.value += "1"}
-    else if(event.key == 2) {input.value += "2"}
-    else if(event.key == 3) {input.value += "3"}
+    else if(event.key == "1") {input.value += "1"}
+    else if(event.key == "2") {input.value += "2"}
+    else if(event.key == "3") {input.value += "3"}
     else if(event.key == "+") {input.value += "+"}
-    else if(event.key == 0) {input.value += "0"}
+    else if(event.key == "0") {input.value += "0"}
     else if(event.code == "Digit5" && event.shiftKey) {input.value += "%"}
     else if (event.code == "Digit9" && event.shiftKey) {input.value += "("}
     else if (event.code == "Digit0" && event.shiftKey) {input.value += ")"}
+    else if (event.key = isCharacterALetter(event.key)) {alert("Only numbers are allowed")} 
     }
 )
+
+function isCharacterALetter(char) {
+  return char.toLowerCase() != char.toUpperCase()
+}
+
 // document.addEventListener("keyup", (event) => {
 //     // console.log(`keyup: key: ${event.key}, code: ${event.code}`);
 //     console.log(event);
