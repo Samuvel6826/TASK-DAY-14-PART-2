@@ -12,13 +12,18 @@ description.innerHTML = "Calculator created using DOM. The keyboard events only 
 description.setAttribute("id", "description")
 document.body.appendChild(description)
 
+// CONTAINER
+let container = document.createElement("div")
+container.setAttribute("id", "container")
+document.body.appendChild(container)
+
 // CALCULATOR CONTAINER - LEFT TEXT CONTAINER
 let leftTextBox = document.createElement("div")
 leftTextBox.setAttribute("id", "leftTextBox")
-document.body.appendChild(leftTextBox)
+container.appendChild(leftTextBox)
 
 // CALCULATOR CONTAINER - LEFT TEXT
-let leftText = document.createElement("div")
+let leftText = document.createElement("h6")
 leftText.setAttribute("id", "leftText")
 leftText.innerHTML = "To handle infix expressions use your keyboard keys"
 leftTextBox.appendChild(leftText)
@@ -26,15 +31,15 @@ leftTextBox.appendChild(leftText)
 // CALCULATOR CONTAINER
 let calculator = document.createElement("div")
 calculator.setAttribute("id", "calculator")
-document.body.appendChild(calculator)
+container.appendChild(calculator)
 
 // CALCULATOR CONTAINER - RIGHT TEXT CONTAINER
 let rightTextBox = document.createElement("div")
 rightTextBox.setAttribute("id", "rightTextBox")
-document.body.appendChild(rightTextBox)
+container.appendChild(rightTextBox)
 
 // CALCULATOR CONTAINER - RIGHT TEXT
-let rightText = document.createElement("div")
+let rightText = document.createElement("h6")
 rightText.setAttribute("id", "rightText")
 rightText.innerHTML = "To handle infix expressions use your keyboard keys"
 rightTextBox.appendChild(rightText)
