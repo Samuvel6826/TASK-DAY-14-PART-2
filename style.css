@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(214, 228, 228);  /* background */
+    background-color: rgb(214, 228, 228);
 }
 
 #title {
@@ -25,7 +25,59 @@ body{
     padding: 10px;
     margin: 0 0 10px 0;
     font-size: large;
+    font-weight: bold;
 }
+
+#leftTextBox {
+    height: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+        bottom: 20%;
+        left: 2%;
+}
+
+#rightTextBox {
+    height: auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+        bottom: 20%;
+        right: 2%;
+}
+
+#leftText,#rightText {
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #231557 0%,
+     #44107a 29%,
+     #ff1361 67%,
+     #fff800 100%
+   );
+   background-size: auto auto;
+   background-clip: border-box;
+   background-size: 200% auto;
+   color: #fff;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+       font-size: 50px;
+ }
+ @keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
 
  #calculator {
     height: 525px;
@@ -35,7 +87,7 @@ body{
     border-radius: 10px;
 } 
 
-#input {
+#result {
     height: 25%;
     width: 100%;
     text-align: end;
@@ -44,12 +96,12 @@ body{
     font-size: 100px;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
-    background-color:rgb(50, 50, 50);   /* number varra box */
-    color: white;                       /* number varra box kulla irukka number */
+    background-color:rgb(50, 50, 50);
+    color: white;     
 }
 
 ::placeholder {
-    color: white;      /* number varra box kulla irukka number illaina anga oru 0 irukkumey athoda colour ithu*/
+    color: white;   
   }
 
 #button_wrapper{
@@ -63,7 +115,7 @@ body{
     justify-content: center;
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
-    background-color: rgb(107, 107, 107);             /* button yellaam irukka box ithu */
+    background-color: rgb(107, 107, 107);        
 } 
 
 button {
@@ -75,11 +127,11 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;    
-    background-color: rgb(255, 255, 255);                             /* ithu matha buttons */
+    background-color: rgb(255, 255, 255);                      
 }
 
-#multiply,#divide,#equal,#add,#subtract,#backspace,#allclear,#point {
-    background-color: rgb(255, 159, 9);                                /* yellow button */
+#multiply,#divide,#equal,#add,#subtract,#backspace,#clear,#point {
+    background-color: rgb(255, 159, 9);                            
 }
 
 button:hover {
@@ -90,6 +142,6 @@ button:hover {
 font-size: x-large;
 }
 
-#allclear {
+#clear {
     font-size: x-large;
     }

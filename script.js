@@ -12,16 +12,38 @@ description.innerHTML = "Calculator created using DOM. The keyboard events only 
 description.setAttribute("id", "description")
 document.body.appendChild(description)
 
+// CALCULATOR CONTAINER - LEFT TEXT CONTAINER
+let leftTextBox = document.createElement("div")
+leftTextBox.setAttribute("id", "leftTextBox")
+document.body.appendChild(leftTextBox)
+
+// CALCULATOR CONTAINER - LEFT TEXT
+let leftText = document.createElement("div")
+leftText.setAttribute("id", "leftText")
+leftText.innerHTML = "To handle infix expressions use your keyboard keys"
+leftTextBox.appendChild(leftText)
+
 // CALCULATOR CONTAINER
 let calculator = document.createElement("div")
 calculator.setAttribute("id", "calculator")
 document.body.appendChild(calculator)
 
+// CALCULATOR CONTAINER - RIGHT TEXT CONTAINER
+let rightTextBox = document.createElement("div")
+rightTextBox.setAttribute("id", "rightTextBox")
+document.body.appendChild(rightTextBox)
+
+// CALCULATOR CONTAINER - RIGHT TEXT
+let rightText = document.createElement("div")
+rightText.setAttribute("id", "rightText")
+rightText.innerHTML = "To handle infix expressions use your keyboard keys"
+rightTextBox.appendChild(rightText)
+
 // CALCULATOR DISPLAY
 let input = document.createElement("input")
 input.placeholder = 0
 input.setAttribute("type", "text")
-input.setAttribute("id", "input")
+input.setAttribute("id", "result")
 input.setAttribute("readonly", "true")
 calculator.appendChild(input)
 
@@ -42,7 +64,7 @@ for(let i=0; i<btnArr.length; i++)
     btn.innerHTML = btnArr[i]
 let flag = true
 // ASSIGNING ID'S TO THE BUTTONS
-if(btn.innerHTML == "AC") {flag = false; btn.setAttribute("id", "allclear")}
+if(btn.innerHTML == "AC") {flag = false; btn.setAttribute("id", "clear")}
 if(btn.innerHTML == "DEL") {flag = false; btn.setAttribute("id", "backspace")}
 if(btn.innerHTML == ".") {btn.setAttribute("id", "point")}
 if(btn.innerHTML == "*") {btn.setAttribute("id", "multiply")}
@@ -57,14 +79,12 @@ if (flag) {
 btn.addEventListener("click", display)
 function display() {
     input.value += btn.innerHTML
-    console.log(typeof(btn.innerHTML))
-} 
-}
-
+    } 
+  }
 }
 
 // FUNCTION TO CLEAR DISPLAY
-let clear = document.getElementById("allclear")
+let clear = document.getElementById("clear")
 clear.addEventListener("click", clearDisplay)
 function clearDisplay() {
     input.value = ""
@@ -106,12 +126,10 @@ document.addEventListener("keyup", (event) => {
     else if(event.key == 3) {input.value += "3"}
     else if(event.key == "+") {input.value += "+"}
     else if(event.key == 0) {input.value += "0"}
+    else if(event.code == "Digit5" && event.shiftKey) {input.value += "%"}
+    else if (event.code == "Digit9" && event.shiftKey) {input.value += "("}
+    else if (event.code == "Digit0" && event.shiftKey) {input.value += ")"}
     }
-)
-
-document.addEventListener("keydown", (event) => {
-    if(event.code == "Digit5" && event.shiftKey) {input.value += "%"}
-}
 )
 // document.addEventListener("keyup", (event) => {
 //     // console.log(`keyup: key: ${event.key}, code: ${event.code}`);
